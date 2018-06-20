@@ -13,15 +13,21 @@ set colorcolumn=80
 set nowrap
 set number
 
-hi CursorLineNr guifg=#050505
+"hi CursorLineNr guifg=#050505
+
+"hi DiffAdd    cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
+"hi DiffDelete cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
+"hi DiffChange cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
+"hi DiffText   cterm=bold ctermfg=10 ctermbg=88 gui=none guifg=bg guibg=Red
+
 
 " =======================================
 " Theme
 " =======================================
 set background=dark
-set guifont=Courier
+"set guifont=Courier
 syntax on
-colorscheme desert
+colorscheme monokai-phoenix
 
 " =======================================
 " Tabbing

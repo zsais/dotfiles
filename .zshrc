@@ -5,7 +5,7 @@ export ZSH=/Users/zsais/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="cloud"
+ZSH_THEME=cloud
 # OTHER THEMES: miloshadzic, wedisagree
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -49,14 +49,20 @@ ZSH_THEME="cloud"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git nyan ruby knife lolcat sublime)
+plugins=(git nyan lolcat zsh-syntax-highlighting osx kubectl)
 
 # User configuration
+export GOPATH="$HOME/go"
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$GOPATH/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
+alias rvm-prompt=$HOME/.rvm/bin/rvm-prompt
+
 source $ZSH/oh-my-zsh.sh
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+source /usr/local/bin/virtualenvwrapper.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -82,3 +88,12 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias gdt="git difftool"
+alias bira="sed -i '' 's/^ZSH_THEME=.*/ZSH_THEME=bira/' $HOME/.zshrc && source $HOME/.zshrc"
+alias cloud="sed -i '' 's/^ZSH_THEME=.*/ZSH_THEME=cloud/' $HOME/.zshrc && source $HOME/.zshrc"
+#alias spaceship="sed -i '' 's/^ZSH_THEME=.*/ZSH_THEME=spaceship/' $HOME/.zshrc && source $HOME/.zshrc"
+#
+#export SPACESHIP_GIT_SYMBOL="§"
+#
+#export PATH="$PATH:$HOME/.rvm" # Add RVM to PATH for scripting
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
