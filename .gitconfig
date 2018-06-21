@@ -1,0 +1,30 @@
+[user]
+  name = Zach Sais
+  email = zach.sais@utexas.edu
+[diff]
+  tool = vimdiff
+[push]
+  default = current
+[gitreview]
+  username = zsais
+[merge]
+  tool = vimdiff
+[diff "ansible-vault"]
+  textconv = ansible-vault view
+  cachetextconv = true
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+[http]
+  cookiefile = /Users/zsais/.gitcookies
+[alias]
+  change = codereview change
+  gofmt = codereview gofmt
+  mail = codereview mail
+  pending = codereview pending
+  submit = codereview submit
+  sync = codereview sync
+[diff "sopsdiffer"]
+  textconv = sops -d
