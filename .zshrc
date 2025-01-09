@@ -49,20 +49,20 @@ ZSH_THEME=cloud
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git nyan lolcat zsh-syntax-highlighting osx kubectl)
+plugins=(git zsh-syntax-highlighting osx kubectl)
 
 # User configuration
 export GOPATH="$HOME/go"
 
-export PATH="$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$GOPATH/bin"
+export PATH="$HOME/bin:/usr/local/git/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$GOPATH/bin:/usr/local/go/bin:/Library/Developer/CommandLineTools/usr/bin/python3:/opt/homebrew/bin:/opt/homebrew/sbin:$(pyenv root)/shims:/usr/local/git/git-google/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
-alias rvm-prompt=$HOME/.rvm/bin/rvm-prompt
+#alias rvm-prompt=$HOME/.rvm/bin/rvm-prompt
 
 source $ZSH/oh-my-zsh.sh
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
-source /usr/local/bin/virtualenvwrapper.sh
+#source /usr/local/bin/virtualenvwrapper.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -97,3 +97,17 @@ alias cloud="sed -i '' 's/^ZSH_THEME=.*/ZSH_THEME=cloud/' $HOME/.zshrc && source
 #
 #export PATH="$PATH:$HOME/.rvm" # Add RVM to PATH for scripting
 #[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/zsais/Downloads/google-cloud-sdk 2/path.zsh.inc' ]; then . '/Users/zsais/Downloads/google-cloud-sdk 2/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/zsais/Downloads/google-cloud-sdk 2/completion.zsh.inc' ]; then . '/Users/zsais/Downloads/google-cloud-sdk 2/completion.zsh.inc'; fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+# Load Angular CLI autocompletion.
+#source <(ng completion script)

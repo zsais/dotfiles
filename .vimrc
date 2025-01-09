@@ -1,5 +1,5 @@
 set nocompatible
-
+set re=0
 " =======================================
 " Display
 " =======================================
@@ -27,7 +27,7 @@ set number
 set background=dark
 "set guifont=Courier
 syntax on
-colorscheme monokai-phoenix
+"#colorscheme monokai-phoenix
 
 " =======================================
 " Tabbing

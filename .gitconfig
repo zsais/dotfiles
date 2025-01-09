@@ -1,6 +1,6 @@
 [user]
   name = Zach Sais
-  email = zach.sais@utexas.edu
+	email = zrs233@gmail.com
 [diff]
   tool = vimdiff
 [push]
@@ -18,7 +18,7 @@
   process = git-lfs filter-process
   required = true
 [http]
-  cookiefile = /Users/zsais/.gitcookies
+	cookiefile = /Users/zsais/.gitcookies
 [alias]
   change = codereview change
   gofmt = codereview gofmt
@@ -28,3 +28,7 @@
   sync = codereview sync
 [diff "sopsdiffer"]
   textconv = sops -d
+[url "sso://code/"]
+	insteadof = https://code.googlesource.com/
+[credential "https://source.developers.google.com"]
+	helper = gcloud.sh
