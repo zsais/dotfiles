@@ -49,7 +49,7 @@ ZSH_THEME=cloud
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting osx kubectl)
+plugins=(git zsh-syntax-highlighting macos kubectl)
 
 # User configuration
 export GOPATH="$HOME/go"
